@@ -3,30 +3,32 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import AllProduct from "./AllProduct";
+import { allProducts } from "@/app/mockData/product";
 
 export default function ProductSection() {
-  const products = [
-    {
-      name: "Armless Solid Dining Chair",
-      price: "GHS 900",
-      image: "/images/popularproducts/chair 1.png",
-    },
-    {
-      name: "Elle Decor Roux Arm Chair",
-      price: "GHS 1,200",
-      image: "/images/popularproducts/chair 2.png",
-    },
-    {
-      name: "Solid Dining Chair",
-      price: "GHS 1,500",
-      image: "/images/popularproducts/chair 3.png",
-    },
-    {
-      name: "Elle Decor Roux Arm Chair",
-      price: "GHS 1,200",
-      image: "/images/popularproducts/chair 4.png",
-    },
-  ];
+  // const products = [
+  //   {
+  //     name: "Armless Solid Dining Chair",
+  //     price: "GHS 900",
+  //     image: "/images/popularproducts/chair 1.png",
+  //   },
+  //   {
+  //     name: "Elle Decor Roux Arm Chair",
+  //     price: "GHS 1,200",
+  //     image: "/images/popularproducts/chair 2.png",
+  //   },
+  //   {
+  //     name: "Solid Dining Chair",
+  //     price: "GHS 1,500",
+  //     image: "/images/popularproducts/chair 3.png",
+  //   },
+  //   {
+  //     name: "Elle Decor Roux Arm Chair",
+  //     price: "GHS 1,200",
+  //     image: "/images/popularproducts/chair 4.png",
+  //   },
+  // ];
 
   return (
     <section className="w-full py-5 bg-[#F2F7FA]">
@@ -48,7 +50,7 @@ export default function ProductSection() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
+          {allProducts.slice(12, 16).map((product, i) => (
             <Card
               key={i}
               className="rounded-xl bg-white shadow-md border border-gray-200 p-6 flex flex-col items-center"
@@ -56,7 +58,7 @@ export default function ProductSection() {
               {/* Product Image */}
               <div className="w-full h-40 relative mb-4 flex items-center justify-center">
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   fill
                   className="object-contain"
@@ -73,9 +75,11 @@ export default function ProductSection() {
               </p>
 
               {/* Button */}
-              <Button className="w-full cursor-pointer mt-4 bg-[#4C739B] hover:bg-[#3e5f81] text-white">
-                View
-              </Button>
+              <Link href={`/products/${product.id}`} className="w-full">
+                <Button className="w-full cursor-pointer mt-4 bg-[#4C739B] hover:bg-[#3e5f81] text-white">
+                  View
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>

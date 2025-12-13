@@ -6,10 +6,13 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { allProducts } from "@/app/mockData/product";
 import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 
 export default function ProductDetailsPage() {
   const params = useParams();
   const id = params.id as string;
+  const router = useRouter();
 
   const product = allProducts.find((item) => item.id === id);
   const [activeImage, setActiveImage] = useState<string | null>(
@@ -25,6 +28,16 @@ export default function ProductDetailsPage() {
   return (
     <section className="w-full py-20">
       <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-10 flex cursor-pointer justify-start gap-2 text-center">
+          {" "}
+          <ArrowLeft/>
+          <button
+            onClick={() => router.back()}
+            className="text-md cursor-pointer"
+          >
+            Back
+          </button>
+        </div>
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* LEFT — IMAGE GALLERY */}

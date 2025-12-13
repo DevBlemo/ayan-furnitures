@@ -3,30 +3,31 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { allProducts } from "@/app/mockData/product";
 
 export default function LatestProduct() {
-  const products = [
-    {
-      name: "Velvet Midnight Natural Sofa",
-      price: "GHS 900",
-      image: "/images/latestproducts/sofa-1.png",
-    },
-    {
-      name: "Modern Furniture",
-      price: "GHS 1,200",
-      image: "/images/latestproducts/sofa-2.png",
-    },
-    {
-      name: "Modern Furniture Set",
-      price: "GHS 1,500",
-      image: "/images/latestproducts/sofa-3.png",
-    },
-    {
-      name: "Furniture Sofa  Set",
-      price: "GHS 1,200",
-      image: "/images/latestproducts/sofa-4.png",
-    },
-  ];
+  // const products = [
+  //   {
+  //     name: "Velvet Midnight Natural Sofa",
+  //     price: "GHS 900",
+  //     image: "/images/latestproducts/sofa-1.png",
+  //   },
+  //   {
+  //     name: "Modern Furniture",
+  //     price: "GHS 1,200",
+  //     image: "/images/latestproducts/sofa-2.png",
+  //   },
+  //   {
+  //     name: "Modern Furniture Set",
+  //     price: "GHS 1,500",
+  //     image: "/images/latestproducts/sofa-3.png",
+  //   },
+  //   {
+  //     name: "Furniture Sofa  Set",
+  //     price: "GHS 1,200",
+  //     image: "/images/latestproducts/sofa-4.png",
+  //   },
+  // ];
 
   return (
     <section className="w-full py-5 bg-[#F2F7FA]">
@@ -48,7 +49,7 @@ export default function LatestProduct() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
+          {allProducts.slice(16, 20).map((product, i) => (
             <Card
               key={i}
               className="rounded-xl bg-white shadow-md border border-gray-200 p-6 flex flex-col items-center"
@@ -56,7 +57,7 @@ export default function LatestProduct() {
               {/* Product Image */}
               <div className="w-full h-40 relative mb-4 flex items-center justify-center">
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   fill
                   className="object-contain"
@@ -73,9 +74,11 @@ export default function LatestProduct() {
               </p>
 
               {/* Button */}
-              <Button className="w-full cursor-pointer mt-4 bg-[#4C739B] hover:bg-[#3e5f81] text-white">
-                View
-              </Button>
+              <Link href={`/products/${product.id}`} className="w-full">
+                <Button className="w-full cursor-pointer mt-4 bg-[#4C739B] hover:bg-[#3e5f81] text-white">
+                  View
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>

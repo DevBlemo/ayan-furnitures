@@ -123,7 +123,7 @@ export default function Products() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
+          {allProducts.map((product, i) => (
             <Card
               key={i}
               className="rounded-xl bg-white shadow-md border border-gray-200 p-6 flex flex-col items-center"
@@ -131,7 +131,7 @@ export default function Products() {
               {/* Product Image */}
               <div className="w-full h-40 relative mb-4 flex items-center justify-center">
                 <Image
-                  src={product?.image}
+                  src={product?.images[0]}
                   alt={product.name}
                   fill
                   className="object-contain"
@@ -148,7 +148,7 @@ export default function Products() {
               </p>
 
               {/* Button */}
-              <Link href={``} className="w-full">
+              <Link href={`/products/${product.id}`} className="w-full">
                 <Button className="w-full mt-4 cursor-pointer bg-[#4C739B] hover:bg-[#3e5f81] text-white">
                   View
                 </Button>
