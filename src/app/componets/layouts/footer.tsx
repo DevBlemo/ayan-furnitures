@@ -14,10 +14,10 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/images/blue-logo.png"
                 alt="Ayan Furniture Logo"
-                width={42}
-                height={42}
+                width={30}
+                height={30}
               />
               <span className="font-semibold text-lg text-gray-900">
                 AYAN
