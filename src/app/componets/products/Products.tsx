@@ -13,6 +13,96 @@ export type Product = {
 };
 
 export default function Products() {
+
+  const products = [
+    // Chair //
+    {
+      name: "Armless Solid Dining Chair",
+      price: "GHS 900",
+      image: "/images/popularproducts/Chair 1.png",
+    },
+    {
+      name: "Elle Decor Roux Arm Chair",
+      price: "GHS 1,200",
+      image: "/images/popularproducts/Chair 2.png",
+    },
+    {
+      name: "Solid Dining Chair",
+      price: "GHS 1,500",
+      image: "/images/popularproducts/Chair 3.png",
+    },
+    {
+      name: "Elle Decor Roux Arm Chair",
+      price: "GHS 1,200",
+      image: "/images/popularproducts/Chair 4.png",
+    },
+    // Tables //
+    {
+      name: "Modern Table Collection",
+      price: "GHS 400",
+      image: "/images/allproducts/sofa-table-1.png",
+    },
+    {
+      name: "Luxury Gold Accent Table",
+      price: "GHS 200",
+      image: "/images/allproducts/sofa-table-2.png",
+    },
+    {
+      name: "Classic Table Collection",
+      price: "GHS 500",
+      image: "/images/allproducts/sofa-table-3.png",
+    },
+    {
+      name: "Furniture & Dining Sets",
+      price: "GHS 900",
+      image: "/images/allproducts/sofa-table-4.png",
+    },
+
+    // Sofa //
+    {
+      name: "Velvet Midnight Natural Sofa",
+      price: "GHS 900",
+      image: "/images/herosection/latestproducts/sofa-1.png",
+    },
+    {
+      name: "Modern Furniture",
+      price: "GHS 1,200",
+      image: "/images/herosection/latestproducts/sofa-2.png",
+    },
+    {
+      name: "Modern Furniture Set",
+      price: "GHS 1,500",
+      image: "/images/herosection/latestproducts/sofa-3.png",
+    },
+    {
+      name: "Furniture Sofa  Set",
+      price: "GHS 1,200",
+      image: "/images/herosection/latestproducts/sofa-4.png",
+    },
+
+    // Lamps //
+    {
+      name: "Losh Design Lamp",
+      price: "GHS 300",
+      image: "/images/allproducts/lamp-1.png",
+    },
+    {
+      name: "Ofula Glass Lamp",
+      price: "GHS 250",
+      image: "/images/allproducts/lamp-2.png",
+    },
+    {
+      name: "Best Bedroom Lamp",
+      price: "GHS 750",
+      image: "/images/allproducts/lamp-3.png",
+    },
+    {
+      name: "Furniture & Dining Sets",
+      price: "GHS 350",
+      image: "/images/allproducts/lamp-4.png",
+    },
+  ];
+
   return (
     <section className="w-full py-5 mb-20 bg-[#F2F7FA]">
       <div className="max-w-360 mx-auto px-6">
@@ -33,7 +123,7 @@ export default function Products() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {allProducts.map((product, i) => (
+          {products.map((product, i) => (
             <Card
               key={i}
               className="rounded-xl bg-white shadow-md border border-gray-200 p-6 flex flex-col items-center"
@@ -41,7 +131,7 @@ export default function Products() {
               {/* Product Image */}
               <div className="w-full h-40 relative mb-4 flex items-center justify-center">
                 <Image
-                  src={product?.images[0]}
+                  src={product?.image}
                   alt={product.name}
                   fill
                   className="object-contain"
@@ -58,7 +148,7 @@ export default function Products() {
               </p>
 
               {/* Button */}
-              <Link href={`/products/${product.id}`} className="w-full">
+              <Link href={``} className="w-full">
                 <Button className="w-full mt-4 cursor-pointer bg-[#4C739B] hover:bg-[#3e5f81] text-white">
                   View
                 </Button>
