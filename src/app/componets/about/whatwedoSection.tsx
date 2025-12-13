@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion, type Variants } from "framer-motion";
 
-const headerVariants = {
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+const headerVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -14,7 +15,7 @@ const headerVariants = {
   },
 };
 
-const gridVariants = {
+const gridVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -23,7 +24,7 @@ const gridVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -54,7 +55,6 @@ export default function WhatWeDoSection() {
   return (
     <section className="w-full bg-white py-24">
       <div className="mx-auto px-6 max-w-[360px] sm:max-w-4xl lg:max-w-7xl">
-
         {/* HEADER */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-20"
@@ -67,7 +67,8 @@ export default function WhatWeDoSection() {
             What We Do
           </h2>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            At Ayan Furniture, we offer a curated <br className="hidden sm:block" />
+            At Ayan Furniture, we offer a curated{" "}
+            <br className="hidden sm:block" />
             selection of carefully designed furniture
           </p>
         </motion.div>
@@ -115,10 +116,10 @@ export default function WhatWeDoSection() {
               </p>
 
               {/* BUTTON */}
-<Link href="/products">
-              <Button className="bg-[#4C739B] cursor-pointer hover:bg-[#3e5f81] text-white px-10 py-5 rounded-md transition-all duration-300">
-                View
-              </Button>
+              <Link href="/products">
+                <Button className="bg-[#4C739B] cursor-pointer hover:bg-[#3e5f81] text-white px-10 py-5 rounded-md transition-all duration-300">
+                  View
+                </Button>
               </Link>
             </motion.div>
           ))}

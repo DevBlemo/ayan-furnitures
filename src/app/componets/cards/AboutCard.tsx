@@ -1,10 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
+
 import Link from "next/link";
 
-const containerVariants = {
+const containerVariants : Variants= {
   hidden: {},
   visible: {
     transition: {
@@ -13,7 +14,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 40,

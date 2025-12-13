@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const textContainer = {
+
+const textContainer : Variants= {
   hidden: {},
   visible: {
     transition: {
@@ -13,7 +14,7 @@ const textContainer = {
   },
 };
 
-const textItem = {
+const textItem : Variants= {
   hidden: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
@@ -22,7 +23,7 @@ const textItem = {
   },
 };
 
-const shadowCard = {
+const shadowCard: Variants = {
   hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
@@ -31,7 +32,7 @@ const shadowCard = {
   },
 };
 
-const imageCard = {
+const imageCard : Variants= {
   hidden: { opacity: 0, x: 60, scale: 0.95 },
   visible: {
     opacity: 1,

@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion,  type Variants } from "framer-motion";
+
 import Link from "next/link";
 
-const leftContainer = {
+const leftContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -14,7 +15,7 @@ const leftContainer = {
   },
 };
 
-const leftItem = {
+const leftItem: Variants = {
   hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
@@ -23,7 +24,7 @@ const leftItem = {
   },
 };
 
-const centerImage = {
+const centerImage: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -32,7 +33,7 @@ const centerImage = {
   },
 };
 
-const rightContainer = {
+const rightContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -41,7 +42,7 @@ const rightContainer = {
   },
 };
 
-const rightItem = {
+const rightItem: Variants = {
   hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,

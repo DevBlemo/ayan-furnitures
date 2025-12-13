@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const images = [
@@ -10,7 +10,7 @@ const images = [
 ];
 
 // SAME SYSTEM AS HOME HERO
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -19,7 +19,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -27,6 +27,8 @@ const itemVariants = {
     transition: { duration: 0.8, ease: "easeOut" },
   },
 };
+
+
 
 export default function AboutHero() {
   const [current, setCurrent] = useState(0);
@@ -41,7 +43,6 @@ export default function AboutHero() {
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-      
       {/* BACKGROUND SLIDER */}
       <AnimatePresence>
         <motion.div

@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -12,7 +12,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -25,22 +25,19 @@ export default function CustomerTestimonialsSection() {
   const testimonials = [
     {
       name: "Sam M.",
-      text:
-        "Ayan Furniture completely transformed my living room. The quality is exceptional, and the customer service made the entire process so easy. I finally have a space that feels like home.",
+      text: "Ayan Furniture completely transformed my living room. The quality is exceptional, and the customer service made the entire process so easy. I finally have a space that feels like home.",
       image: "/images/about/user-1.png",
       active: true,
     },
     {
       name: "Kwame A.",
-      text:
-        "From the moment I walked in, their team understood exactly what I wanted. The furniture is stylish, comfortable, and worth every cedi. I’ll definitely be coming back for more pieces.",
+      text: "From the moment I walked in, their team understood exactly what I wanted. The furniture is stylish, comfortable, and worth every cedi. I’ll definitely be coming back for more pieces.",
       image: "/images/about/user-2.png",
       active: false,
     },
     {
       name: "Evelyn T.",
-      text:
-        "Beautiful designs and top-notch craftsmanship. My order arrived on time, and the team helped me choose pieces that fit my space perfectly.",
+      text: "Beautiful designs and top-notch craftsmanship. My order arrived on time, and the team helped me choose pieces that fit my space perfectly.",
       image: "/images/about/user-3.png",
       active: false,
     },
@@ -56,10 +53,9 @@ export default function CustomerTestimonialsSection() {
       }}
     >
       {/* SUBTLE PATTERN */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#ffffff10_1px,transparent_0)] bg-[length:40px_40px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#ffffff10_1px,transparent_0)] bg-size-[40px_40px]" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6">
-
         {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -105,15 +101,12 @@ export default function CustomerTestimonialsSection() {
 
               {/* CONTENT */}
               <div>
-                <p className="text-sm leading-relaxed mb-3">
-                  {item.text}
-                </p>
+                <p className="text-sm leading-relaxed mb-3">{item.text}</p>
                 <p className="text-xs text-gray-500">{item.name}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

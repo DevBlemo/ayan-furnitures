@@ -1,9 +1,9 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -12,7 +12,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -33,7 +33,6 @@ export default function CategorySection() {
   return (
     <section className="w-full py-16 bg-[#F2F7FA] overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

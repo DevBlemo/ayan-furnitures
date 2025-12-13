@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
-const imageVariants = {
+const imageVariants :Variants = {
   hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
@@ -14,7 +14,7 @@ const imageVariants = {
   },
 };
 
-const textVariants = {
+const textVariants :Variants = {
   hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
@@ -26,7 +26,7 @@ const textVariants = {
 export default function ExploreSection() {
   return (
     <section className="w-full bg-[#537891] py-20 mb-5 overflow-hidden">
-      <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-24 xl:px-32">
+      <div className="max-w-360 mx-auto px-6 sm:px-12 lg:px-24 xl:px-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* IMAGE */}
           <motion.div

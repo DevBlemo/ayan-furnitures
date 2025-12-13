@@ -5,10 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
 
-const cardVariants = {
+const cardVariants : Variants= {
   hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
@@ -17,7 +17,7 @@ const cardVariants = {
   },
 };
 
-const leftVariants = {
+const leftVariants: Variants = {
   hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
@@ -26,7 +26,7 @@ const leftVariants = {
   },
 };
 
-const rightVariants = {
+const rightVariants : Variants= {
   hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,

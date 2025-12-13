@@ -1,6 +1,5 @@
 "use client";
-
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -11,7 +10,7 @@ const images = [
   "/images/hero/hero-bg-3.jpg",
 ];
 
-const containerVariants = {
+const containerVariants : Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -19,7 +18,7 @@ const containerVariants = {
     },
   },
 };
-const itemVariants = {
+const itemVariants : Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,

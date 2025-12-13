@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-// import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function AllProduct() {
@@ -104,7 +103,7 @@ export default function AllProduct() {
               </p>
 
               {/* Button */}
-              <Link href={`/products/${product.id}`} className="w-full">
+              <Link href={``} className="w-full">
                 {" "}
                 <Button className="w-full cursor-pointer mt-4 bg-[#4C739B] hover:bg-[#3e5f81] text-white">
                   View

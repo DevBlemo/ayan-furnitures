@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { allProducts } from "@/app/mockData/product";
@@ -13,7 +13,7 @@ export default function ProductDetailsPage() {
 
   const product = allProducts.find((item) => item.id === id);
   const [activeImage, setActiveImage] = useState<string | null>(
-    product?.images[0] ?? null
+    product?.images[0] || ""
   );
   console.log(product);
   console.log(params.id);
@@ -32,23 +32,25 @@ export default function ProductDetailsPage() {
             {/* MAIN IMAGE */}
             <div className="relative w-full h-[380px] md:h-[460px] mb-6 overflow-hidden">
               <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeImage}
-                  className="absolute inset-0"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Image
-                    src={activeImage}
-                    alt="Product image"
-                    fill
-                    priority
-                    className="object-contain"
-                  />
-                </motion.div>
+                {activeImage && (
+                  <motion.div
+                    key={activeImage}
+                    className="absolute inset-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Image
+                      src={activeImage}
+                      alt="Product image"
+                      fill
+                      priority
+                      className="object-contain"
+                    />
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
 

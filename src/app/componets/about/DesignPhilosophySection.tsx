@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const leftContainer = {
+
+const leftContainer : Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -12,7 +13,7 @@ const leftContainer = {
   },
 };
 
-const leftItem = {
+const leftItem : Variants = {
   hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
@@ -21,7 +22,7 @@ const leftItem = {
   },
 };
 
-const imageVariants = {
+const imageVariants : Variants = {
   hidden: { opacity: 0, x: 60 },
   visible: {
     opacity: 1,
