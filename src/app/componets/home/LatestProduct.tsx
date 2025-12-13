@@ -9,22 +9,22 @@ export default function LatestProduct() {
     {
       name: "Velvet Midnight Natural Sofa",
       price: "GHS 900",
-      image: "/images/herosection/latestproducts/sofa-1.png",
+      image: "/images/latestproducts/sofa-1.png",
     },
     {
       name: "Modern Furniture",
       price: "GHS 1,200",
-      image: "/images/herosection/latestproducts/sofa-2.png",
+      image: "/images/latestproducts/sofa-2.png",
     },
     {
       name: "Modern Furniture Set",
       price: "GHS 1,500",
-      image: "/images/herosection/latestproducts/sofa-3.png",
+      image: "/images/latestproducts/sofa-3.png",
     },
     {
       name: "Furniture Sofa  Set",
       price: "GHS 1,200",
-      image: "/images/herosection/latestproducts/sofa-4.png",
+      image: "/images/latestproducts/sofa-4.png",
     },
   ];
 

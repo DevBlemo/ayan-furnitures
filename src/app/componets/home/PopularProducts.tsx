@@ -9,22 +9,22 @@ export default function ProductSection() {
     {
       name: "Armless Solid Dining Chair",
       price: "GHS 900",
-      image: "/images/popularproducts/Chair 1.png",
+      image: "/images/popularproducts/chair 1.png",
     },
     {
       name: "Elle Decor Roux Arm Chair",
       price: "GHS 1,200",
-      image: "/images/popularproducts/Chair 2.png",
+      image: "/images/popularproducts/chair 2.png",
     },
     {
       name: "Solid Dining Chair",
       price: "GHS 1,500",
-      image: "/images/popularproducts/Chair 3.png",
+      image: "/images/popularproducts/chair 3.png",
     },
     {
       name: "Elle Decor Roux Arm Chair",
       price: "GHS 1,200",
-      image: "/images/popularproducts/Chair 4.png",
+      image: "/images/popularproducts/chair 4.png",
     },
   ];
 
