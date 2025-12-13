@@ -71,7 +71,7 @@ export default function HeroSection() {
           variants={itemVariants}
           className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide"
         >
-          AYAN FURNITURE
+          AYAN FURNITUREgy
         </motion.h1>
 
         <motion.p
@@ -86,7 +86,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link href="/products">
-            <Button className="bg-[#2b80d0] cursor-pointer hover:bg-[#2366a4] text-white px-6 py-5 transition-all duration-300">
+            <Button className="bg-[#4C739B] cursor-pointer hover:bg-[#3e5f81] text-white px-6 py-5 transition-all duration-300">
               Explore Our Collection
             </Button>
           </Link>

@@ -8,8 +8,12 @@ import { allProducts } from "@/app/mockData/product";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { Phone } from "lucide-react";
 
 export default function ProductDetailsPage() {
+  const [showPhone, setShowPhone] = useState(false);
+
   const params = useParams();
   const id = params.id as string;
   const router = useRouter();
@@ -30,7 +34,7 @@ export default function ProductDetailsPage() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-10 flex cursor-pointer justify-start gap-2 text-center">
           {" "}
-          <ArrowLeft/>
+          <ArrowLeft />
           <button
             onClick={() => router.back()}
             className="text-md cursor-pointer"
@@ -122,9 +126,49 @@ export default function ProductDetailsPage() {
               nooks, offices, or bedrooms.
             </p>
 
-            <Button className="bg-[#4C739B] hover:bg-[#3e5f81] text-white px-10 py-5">
-              Show Phone Number
+            <Button
+              onClick={() => setShowPhone((prev) => !prev)}
+              className="bg-[#4C739B] hover:bg-[#3e5f81] cursor-pointer text-white px-10 py-5"
+            >
+              {showPhone ? "Hide Phone Number" : "Show Phone Number"}
             </Button>
+            <br />
+            <AnimatePresence>
+              {showPhone && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  className="
+        mt-4 flex flex-col gap-3
+        rounded-lg bg-[#F2F7FA] px-6 py-4
+        border border-[#4C739B]/20
+        shadow-sm
+      "
+                >
+                  {/* PHONE */}
+                  <a
+                    href="tel:+233591120999"
+                    className="text-[#4C739B] font-semibold hover:underline flex gap-2.5 items-center"
+                  >
+                    <Phone className="text-[#4C739B]" />
+                    +233 591 120 999
+                  </a>
+
+                  {/* WHATSAPP */}
+                  <a
+                    href="https://wa.me/233572055860?text=Hello%20I%20am%20interested%20in%20this%20product"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#4C739B] font-semibold hover:underline flex gap-2.5 items-center"
+                  >
+                    <FaWhatsapp size={28} className="text-[#4C739B]" />
+                    Chat on WhatsApp
+                  </a>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 
