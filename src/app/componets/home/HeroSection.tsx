@@ -10,7 +10,7 @@ const images = [
   "/images/hero/hero-bg-3.jpg",
 ];
 
-const containerVariants : Variants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -18,7 +18,7 @@ const containerVariants : Variants = {
     },
   },
 };
-const itemVariants : Variants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -71,7 +71,7 @@ export default function HeroSection() {
           variants={itemVariants}
           className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide"
         >
-          AYAN FURNITUREgy
+          AYAN FURNITURE
         </motion.h1>
 
         <motion.p

@@ -6,10 +6,8 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#F7FAFC] border-t border-gray-200">
       <div className="max-w-360 mx-auto px-6 py-16">
-
         {/* TOP GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* BRAND + DESCRIPTION */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -19,9 +17,7 @@ export default function Footer() {
                 width={30}
                 height={30}
               />
-              <span className="font-semibold text-lg text-gray-900">
-                AYAN
-              </span>
+              <span className="font-semibold text-lg text-gray-900">AYAN</span>
             </div>
 
             <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
@@ -54,10 +50,26 @@ export default function Footer() {
               Company
             </h4>
             <ul className="space-y-3 text-sm text-gray-600">
-              <li><Link href="#" className="hover:text-gray-900">About us</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Contact us</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Products</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Press</Link></li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Contact us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Press
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -67,25 +79,50 @@ export default function Footer() {
               Product
             </h4>
             <ul className="space-y-3 text-sm text-gray-600">
-              <li><Link href="#" className="hover:text-gray-900">Features</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Pricing</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">FAQ</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Support</Link></li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Support
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* LEGAL */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">
-              Legal
-            </h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
             <ul className="space-y-3 text-sm text-gray-600">
-              <li><Link href="#" className="hover:text-gray-900">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Terms & Conditions</Link></li>
-              <li><Link href="#" className="hover:text-gray-900">Return Policy</Link></li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-gray-900">
+                  Return Policy
+                </Link>
+              </li>
             </ul>
           </div>
-
         </div>
 
         {/* DIVIDER */}
@@ -94,7 +131,6 @@ export default function Footer() {
             © 2025 Copyright, All Right Reserved
           </p>
         </div>
-
       </div>
     </footer>
   );

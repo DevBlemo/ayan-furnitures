@@ -45,8 +45,8 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Ayan Furniture Logo"
-            width={30}
-            height={30}
+            width={50}
+            height={50}
             className="object-contain"
           />
         </Link>
