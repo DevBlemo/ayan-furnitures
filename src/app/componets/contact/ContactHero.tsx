@@ -85,7 +85,7 @@ export default function ContactPage() {
                 <MapPin size={18} className="mt-1 text-gray-500" />
                 <div>
                   <p className="font-medium">Physical address</p>
-                  <p>60 Fremont Ave. Hamden, CT 06514</p>
+                  <p>East Legon Hills Santoe Road near Goil feeling station, Accra</p>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 <Phone size={18} className="mt-1 text-gray-500" />
                 <div>
                   <p className="font-medium">Phone number</p>
-                  <p>+437 402-2459</p>
+                  <p>+233 256 841 706</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 <Mail size={18} className="mt-1 text-gray-500" />
                 <div>
                   <p className="font-medium">Email address</p>
-                  <p>fStore@email.com</p>
+                  <p>hello@ayanfurniture.store</p>
                 </div>
               </div>
             </div>

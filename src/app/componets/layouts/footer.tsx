@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
+import { RiTiktokLine } from "react-icons/ri";
 
 export default function Footer() {
   return (
@@ -29,18 +30,25 @@ export default function Footer() {
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 pt-2">
-              <Link href="#" className="text-gray-600 hover:text-gray-900">
+              {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Twitter size={18} />
-              </Link>
+              </Link> */}
+
               <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <RiTiktokLine size={18} />
+              </Link>
+              {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Facebook size={18} />
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900">
+              </Link> */}
+              <Link
+                href="https://www.instagram.com/ayanfurnituregh/"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 <Instagram size={18} />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900">
+              {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Linkedin size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -104,23 +112,27 @@ export default function Footer() {
 
           {/* LEGAL */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">
+              Location
+            </h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
                 <Link href="#" className="hover:text-gray-900">
-                  Privacy Policy
+                  East Legon Hills Santoe Road near Goil feeling station, Accra
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-gray-900">
-                  Terms & Conditions
+                <Link href="#" className="hover:text-gray-900 font-bold">
+                  Contacts Us: <br />
+                  Email: hello@ayanfurniture.store <br />
+                  Phone: +233 256 841 706
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="hover:text-gray-900">
                   Return Policy
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
